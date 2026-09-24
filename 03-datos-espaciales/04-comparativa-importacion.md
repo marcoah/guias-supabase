@@ -1,6 +1,6 @@
 # 🔄 Guía: Comparativa de Importación (QGIS vs PostGIS GUI)
 
-[« Volver al Índice](./README.md) | [Paso Anterior](./07-importacion-capas-postgis.md) | [Siguiente Paso: Conclusión »](./README.md)
+[« Índice de la sección](./README.md) | [Anterior: Importación con PostGIS GUI](./03-importacion-postgis-gui.md) | [Siguiente: Seguridad con RLS »](../02-configuracion-basica/04-seguridad-rls.md)
 
 ---
 
@@ -37,7 +37,7 @@ Independientemente del método que uses, recuerda habilitar la seguridad en el p
 
 1. Entra al **Table Editor**.
 2. Para cada tabla nueva, haz clic en **Enable RLS** (Row Level Security).
-3. Esto asegura que la tabla cumpla con las políticas de seguridad de la plataforma.
+3. Esto asegura que la tabla cumpla con las políticas de seguridad de la plataforma. Detalles en [Seguridad con RLS](../02-configuracion-basica/04-seguridad-rls.md).
 
 ---
 

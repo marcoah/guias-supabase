@@ -1,6 +1,6 @@
 # 🚀 Guía: Importación de Capas Vectoriales (Shapefiles) a Supabase
 
-[« Volver al Índice](./README.md) | [Paso Anterior](./06-conexion-qgis.md) | [Siguiente Paso: Comparativa de Importación »](./08-comparativa-importacion.md)
+[« Índice de la sección](./README.md) | [Anterior: Conexión desde QGIS](./02-conexion-qgis.md) | [Siguiente: Comparativa de importación »](./04-comparativa-importacion.md)
 
 ---
 
@@ -9,7 +9,7 @@ Para subir archivos geográficos (Shapefiles) de forma eficiente y estable, util
 ## 1. Conexión al Servidor desde PostGIS GUI
 
 1. Abre la aplicación **PostGIS Shapefile Import/Export Manager**.
-2. Haz clic en **View Connection Details** e ingresa los datos de Supabase ([Paso 04](./04-parametros-conexion.md)):
+2. Haz clic en **View Connection Details** e ingresa los datos de Supabase ([Parámetros de conexión](../02-configuracion-basica/02-parametros-conexion.md)):
    * **Username:** Tu usuario de Postgres.
    * **Password:** Tu contraseña del proyecto.
    * **Server Host:** El host de Supabase.

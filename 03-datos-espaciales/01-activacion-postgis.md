@@ -1,6 +1,6 @@
 # 🗺️ Guía: Activación de PostGIS en Supabase
 
-[« Volver al Índice](./README.md) | [Paso Anterior](./01-configuracion-supabase.md) | [Siguiente Paso: Obtención de Credenciales »](./03-obtencion-credenciales.md)
+[« Índice de la sección](./README.md) | [Siguiente: Conexión desde QGIS »](./02-conexion-qgis.md)
 
 ---
 
@@ -8,15 +8,15 @@ El paso más crítico para convertir **PostgreSQL** en una base de datos espacia
 
 ## 1. Acceso al Panel de Base de Datos
 
-![Creación de Proyecto en Supabase](./img/02-activacion_postgis_1.png)
+![Panel lateral de Supabase](./img/01-activacion-postgis-1.png)
 _Figura 1: Panel lateral izquierdo._
 
 1. En el panel lateral izquierdo de tu proyecto en Supabase, haz clic en el icono de **Database** 🐘.
 
 ## 2. Gestión de Extensiones
 
-![Creación de Proyecto en Supabase](./img/02-activacion_postgis_2.png)
-_Figura 1: Extensiones de Supabase._
+![Extensiones de Supabase](./img/01-activacion-postgis-2.png)
+_Figura 2: Extensiones de Supabase._
 
 1. Dentro de la configuración de la base de datos, selecciona la opción **Extensions**.
 2. Verás una lista extensa de funcionalidades adicionales que puedes "encender" para tu servidor.

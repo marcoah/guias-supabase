@@ -1,33 +1,66 @@
-# Guía Completa: Gestión de Datos Espaciales con Supabase y PostGIS
+# 📚 Guías de Supabase
 
-Esta documentación técnica detalla el flujo de trabajo profesional para crear, configurar y gestionar bases de datos espaciales en la nube utilizando **PostgreSQL**, **PostGIS** y **Supabase**.
-
-Ideal para quienes buscan conectar sus datos geográficos con **QGIS**, **pgAdmin** y desplegar geoportales web modernos.
+Recopilación de guías prácticas, configuraciones y trucos para trabajar con **Supabase** (PostgreSQL en la nube). Sirve como material de referencia para las clases: cada sección se puede seguir por separado y cada guía indica sus requisitos previos.
 
 ---
 
-## Índice de Contenidos
+## 🗂️ Secciones
 
-Haz clic en cada paso para ver la guía detallada:
-
-| Paso      | Guía de Implementación                                               | Descripción                                                  |
-| :-------- | :------------------------------------------------------------------- | :----------------------------------------------------------- |
-| ☁️ **01** | [**Configuración de Supabase**](./01-configuracion-supabase.md)      | Creación de cuenta, proyecto y base de datos inicial.        |
-| 🗺️ **02** | [**Activación de PostGIS**](./02-activacion-postgis.md)              | Habilitar extensiones espaciales y herramientas adicionales. |
-| 🔑 **03** | [**Obtención de Credenciales**](./03-obtencion-credenciales.md)      | Localización de API Keys y URLs del proyecto.                |
-| 🔌 **04** | [**Parámetros de Conexión**](./04-parametros-conexion.md)            | Datos técnicos para conexión remota vía Transaction Pool.    |
-| 🐘 **05** | [**Conexión desde pgAdmin 4**](./05-conexion-pgadmin.md)             | Administración avanzada de SQL local y remota.               |
-| 🧭 **06** | [**Conexión desde QGIS**](./06-conexion-qgis.md)                     | Visualización y edición de capas directamente en tu SIG.     |
-| 🚀 **07** | [**Importación con PostGIS GUI**](./07-importacion-capas-postgis.md) | Carga masiva y estable de Shapefiles a la nube.              |
-| 🔄 **08** | [**Comparativa de Importación**](./08-comparativa-importacion.md)    | QGIS vs PostGIS GUI: ¿Cuál elegir y por qué?                 |
-| 🛡️ **09** | [**Seguridad de Datos (RLS)**](./09-seguridad-datos-rls.md)          | Configuración de políticas para acceso público o privado.    |
+| # | Sección | Contenido | Estado |
+| :-- | :-- | :-- | :-- |
+| 01 | [**Registro básico**](./01-registro/README.md) | Crear la cuenta, la organización y el primer proyecto. | ✅ Disponible |
+| 02 | [**Configuración básica**](./02-configuracion-basica/README.md) | Credenciales de API, parámetros de conexión, pgAdmin y seguridad RLS. | ✅ Disponible |
+| 03 | [**Datos espaciales (PostGIS)**](./03-datos-espaciales/README.md) | PostGIS, QGIS, importación de Shapefiles y geoportales. | ✅ Disponible |
+| 04 | [**Consultas a la API**](./04-consultas-api/README.md) | Consultas REST y con `supabase-js`: filtros, paginación, RPC. | 🚧 En preparación |
+| 05 | [**Conexión con Power BI**](./05-power-bi/README.md) | Conectar Power BI a la base de datos de Supabase. | 🚧 En preparación |
+| 06 | [**Trucos varios**](./06-trucos/README.md) | Recetas cortas, atajos y soluciones a problemas frecuentes. | 🚧 En preparación |
 
 ---
 
-## Objetivo Final: Geoportal HTML
+## 🧭 Ruta sugerida
 
-Siguiendo esta guía, podrás visualizar capas vectoriales (agua potable, barrios, alcantarillado, servicios de salud, etc.) en un **Geoportal Web Interactivo**:
+```text
+01 Registro ──► 02 Configuración básica ──┬──► 03 Datos espaciales
+                                          ├──► 04 Consultas a la API
+                                          ├──► 05 Power BI
+                                          └──► 06 Trucos varios
+```
 
-- **Sincronización:** Cambios en QGIS se reflejan al instante en la web.
-- **API-First:** Consumo de datos espaciales mediante la API de Supabase.
-- **Seguridad:** Configuración de políticas RLS para proteger tus datos.
+Las secciones **01** y **02** son la base de todas las demás. A partir de ahí, cada sección es independiente.
+
+---
+
+## 📁 Estructura del repositorio
+
+```text
+guias-supabase/
+├── README.md                    ← Este índice general
+├── _plantilla-guia.md           ← Plantilla para escribir nuevas guías
+├── 01-registro/
+├── 02-configuracion-basica/
+├── 03-datos-espaciales/
+├── 04-consultas-api/
+├── 05-power-bi/
+└── 06-trucos/
+```
+
+Cada sección tiene:
+
+- Un `README.md` con el índice de sus guías.
+- Guías numeradas (`01-...md`, `02-...md`) en el orden en que se recomienda seguirlas.
+- Una carpeta `img/` con las capturas de pantalla de esa sección.
+
+---
+
+## ✍️ Cómo añadir una guía nueva
+
+1. Copia [`_plantilla-guia.md`](./_plantilla-guia.md) dentro de la carpeta de la sección.
+2. Renómbrala con el siguiente número disponible y un nombre corto en minúsculas y con guiones (ej. `05-backups-automaticos.md`).
+3. Guarda las capturas en la carpeta `img/` de la sección, con el mismo prefijo numérico que la guía (ej. `img/05-backups-1.png`).
+4. Agrega la guía a la tabla del `README.md` de la sección y actualiza los enlaces «Anterior / Siguiente» de las guías vecinas.
+
+---
+
+## 🙌 Créditos
+
+- Guía de importación con PostGIS GUI documentada por [JonatanLara](https://github.com/jonatanLara).

@@ -1,30 +1,39 @@
 # 🔑 Guía: Obtención de Credenciales (URL y API Key)
 
-[« Volver al Índice](./README.md) | [Paso Anterior](./02-activacion-postgis.md) | [Siguiente Paso: Parámetros de Conexión »](./04-parametros-conexion.md)
+[« Índice de la sección](./README.md) | [Anterior: Crear cuenta y proyecto](../01-registro/01-crear-cuenta-y-proyecto.md) | [Siguiente: Parámetros de conexión »](./02-parametros-conexion.md)
 
 ---
 
-Para conectar tu base de datos con un geoportal web, necesitas obtener la URL de acceso y la llave de autorización (API Key).
+Para que una aplicación web (por ejemplo, un geoportal o un formulario) se comunique con tu base de datos a través de la API de Supabase, necesitas la URL del proyecto y una llave de autorización (API Key).
 
 ## 1. Acceso a la Configuración del Proyecto
 
 1. En el panel lateral izquierdo, haz clic en el icono de **Project Settings** (engrane ⚙️).
-2. Selecciona la opción **API**.
+2. Busca las secciones **Data API** (URL del proyecto) y **API Keys** (llaves).
+
+> [!TIP]
+> El botón **Connect** de la parte superior del panel también muestra la URL y la llave pública, listas para copiar.
 
 ## 2. Obtener la URL del Proyecto (Project URL)
 
-Localiza el campo **Project URL** dentro de la sección **API Settings**.
-Copia la dirección que empieza por `https://...` y guárdala.
+Localiza el campo **Project URL**. Tiene la forma `https://<id-del-proyecto>.supabase.co`. Cópiala y guárdala.
 
-## 3. Obtener la API Key (Anon Public)
+## 3. Obtener la API Key Pública
 
-Localiza la clave etiquetada como **anon public**. Haz clic en el icono para copiar la cadena de caracteres.
+Supabase ofrece dos juegos de llaves. Según la antigüedad del proyecto verás uno u otro (o ambos):
+
+| Tipo | Llave pública (usar en el navegador) | Llave secreta (solo en servidores) |
+| :-- | :-- | :-- |
+| **Nuevas** | `publishable` (empieza con `sb_publishable_...`) | `secret` (empieza con `sb_secret_...`) |
+| **Heredadas (Legacy)** | `anon public` | `service_role` |
+
+Copia la llave **pública** (`publishable` o `anon`). Es la que usarás en tu sitio web.
 
 > [!IMPORTANT]
-> **Seguridad Crítica:** Nunca expongas tu `Service Role Key` (llave de servicio). Esta llave tiene permisos de administrador y puede borrar toda tu base de datos si cae en manos equivocadas. Solo usa la clave **`anon public`** para el Geoportal.
+> **Seguridad crítica:** Nunca expongas la llave **secreta** (`secret` o `service_role`). Esa llave ignora las políticas RLS y tiene permisos de administrador: puede leer y borrar toda tu base de datos si cae en manos equivocadas. En el navegador usa **solo** la llave pública, y protege los datos con [políticas RLS](./04-seguridad-rls.md).
 
 ---
 
-### NOTA
+### Resultado Esperado
 
-Guarda estos dos datos en un archivo de texto seguro. Esta combinación será la que permitirá que tu sitio web interactúe con la base de datos para visualizar mapas y capas.
+Guarda la **URL del proyecto** y la **llave pública** en un lugar seguro. Esta combinación es la que permite que tu sitio web consulte la base de datos (ver [Consultas a la API](../04-consultas-api/README.md)).

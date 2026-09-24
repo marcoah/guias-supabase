@@ -1,6 +1,6 @@
 # 🐘 Guía: Conexión de la Base de Datos con pgAdmin 4
 
-[« Volver al Índice](./README.md) | [Paso Anterior](./04-parametros-conexion.md) | [Siguiente Paso: Conexión desde QGIS »](./06-conexion-qgis.md)
+[« Índice de la sección](./README.md) | [Anterior: Parámetros de conexión](./02-parametros-conexion.md) | [Siguiente: Seguridad con RLS »](./04-seguridad-rls.md)
 
 ---
 
@@ -25,7 +25,7 @@ Permite administrar la base de datos real que alimentará tu geoportal.
 
 1. En pgAdmin, haz clic derecho en **Servers** > **Register** > **Server**.
 2. **Pestaña General:** Asigna un nombre identificativo (ej. `Geoportal Supabase`).
-3. **Pestaña Connection:** Usa los parámetros de **Transaction Pooler** ([Paso 04](./04-parametros-conexion.md)):
+3. **Pestaña Connection:** Usa los parámetros de **Transaction Pooler** ([Parámetros de conexión](./02-parametros-conexion.md)):
    - **Host:** Pega la dirección del Host de Supabase.
    - **Port:** `6543`.
    - **Username:** Pega el usuario proporcionado por Supabase.

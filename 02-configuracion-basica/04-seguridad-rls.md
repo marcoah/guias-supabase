@@ -1,10 +1,10 @@
 # 🛡️ Guía: Seguridad de Datos con RLS (Row Level Security)
 
-[« Volver al Índice](./README.md) | [Paso Anterior](./08-comparativa-importacion.md) | [Siguiente Paso: Conclusión »](./README.md)
+[« Índice de la sección](./README.md) | [Anterior: Conexión desde pgAdmin](./03-conexion-pgadmin.md) | [Volver al índice general »](../README.md)
 
 ---
 
-Una vez que tus capas geográficas están en la nube (Supabase), el paso final es configurar quién puede ver o editar esa información. Para ello utilizamos las **Políticas RLS**.
+Una vez que tus datos están en Supabase (tablas normales o capas geográficas), hay que configurar quién puede verlos o editarlos a través de la API. Para ello utilizamos las **Políticas RLS**. Los ejemplos usan capas de un geoportal, pero el procedimiento es igual para cualquier tabla.
 
 ## 1. ¿Qué es RLS (Row Level Security)?
 
@@ -21,7 +21,7 @@ Para cada capa importada (Barrios, Bomberos, Salud, etc.), debes activar el inte
 2. Selecciona la tabla (ej. `barrios`).
 3. Haz clic en el botón **No active RLS policies** para abrir el gestor de seguridad.
 
-![Habilitar RLS](./img/09-habilitar-rls.png)
+![Habilitar RLS](./img/04-habilitar-rls.png)
 _Figura 1: Activación del interruptor RLS en el Table Editor._
 
 ## 3. Crear una Política de Acceso

@@ -1,6 +1,6 @@
 # Guía: Conexión de la Base de Datos en QGIS
 
-[« Volver al Índice](./README.md) | [Paso Anterior](./05-conexion-pgadmin.md) | [Siguiente Paso: Importación con PostGIS GUI »](./07-importacion-capas-postgis.md)
+[« Índice de la sección](./README.md) | [Anterior: Activación de PostGIS](./01-activacion-postgis.md) | [Siguiente: Importación con PostGIS GUI »](./03-importacion-postgis-gui.md)
 
 ---
 
@@ -13,15 +13,15 @@ En esta sección aprenderás a conectar **QGIS** con tu base de datos de **Supab
 
 ## 2. Parámetros de Conexión
 
-Completa los campos en la pestaña **General** con los datos de tu proyecto ([Paso 04](./04-parametros-conexion.md)):
+Completa los campos en la pestaña **General** con los datos de tu proyecto ([Parámetros de conexión](../02-configuracion-basica/02-parametros-conexion.md)):
 
 - **Nombre:** Elige un nombre descriptivo (ej. `Geoportal_Supabase`).
 - **Anfitrión (Host):** Pega la dirección del host de Supabase.
 - **Puerto:** `6543`.
 - **Base de datos:** `postgres`.
 
-![Configuración de Conexión en QGIS](./img/06-conexion-qgis.png)
-_Figura 2: Ejemplo de cómo llenar los campos de conexión en QGIS._
+![Configuración de Conexión en QGIS](./img/02-conexion-qgis.png)
+_Figura 1: Ejemplo de cómo llenar los campos de conexión en QGIS._
 
 ## 3. Autenticación y Credenciales
 
